@@ -30,16 +30,15 @@ class ImageProcessor:
         self.save_image(processed_img)
 
 
-data_folder = Path(os.getcwd()) / 'data'
+if __name__ == "__main__":
 
-processor = ImageProcessor(data_folder)
+    data_folder = Path(os.getcwd()) / 'data'
 
-user_input = ""
+    processor = ImageProcessor(data_folder)
 
-while user_input.lower() not in ["q"]:
-    processor.process_and_save_image()
-    user_input = input("Press q to quit or any other key to continue: ")
+    user_input = ""
 
-
-
+    while user_input.lower() not in ["q"]:
+        processor.process_and_save_image()
+        user_input = input("Press q to quit or any other key to continue: ")
 
